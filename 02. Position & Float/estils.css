@@ -20,7 +20,8 @@ p#titol {
   position: fixed;
 
   /* CSS AL DAVALL */
-  left: 200px;
+  left: 4em; /* Muevo el texto a la derecha */
+  z-index: 1; /* POngo el texto una capa por encima del resto para que se vea el subrayado */
 
 }
 
@@ -33,7 +34,8 @@ h2 {
 
   /* CSS AL DAVALL */
 
-  top: 100px;
+  top: 2em; /* Muevo el texto encima de la foto de la modelo */
+  left: 1.5em;
 }
 
 
@@ -41,18 +43,19 @@ img#model {
   position: absolute;
 
   /* CSS AL DAVALL */
-  margin-top: 20px;
-  margin-left: 20px;
+  margin-top: 1em; /* Ajusto márgenes de la foto  */
+  margin-left: 2em;
+  z-index: 2;  /* Aplico z-index para que la foto este encima del texto y se tape*/
 }
 
 img#scissors {
   position: absolute;
 
   /* CSS AL DAVALL */
-  bottom: 0;
+  bottom: 0; /* Coloco la foto en el sitio que le corresponde */
   right: 0;
-  margin-bottom: 20px;
-  margin-right: 20px;
+  margin-bottom: 1.5em; /* Aplico márgenes */
+  margin-right: 1.5em;
 }
 
 .description {
@@ -63,7 +66,7 @@ img#scissors {
 
 /* CSS AL DAVALL */
 
-bottom: 50px;
-left: 15px;
+bottom: 2em; /* Coloco el texto donde corresponde */
+left: 1em;
 
 }
