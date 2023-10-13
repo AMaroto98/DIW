@@ -1,0 +1,151 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px;
+}
+
+body {
+    max-width: 1000px; /* Layout máximo de 1000px */
+    margin: 0 auto; /* Centrar el contenido del body */
+    border: 1px solid #d80b0b;
+}
+
+header {
+    border: 1px solid #000000;
+    max-height: 120px;
+    display: flex;
+    flex-direction: row;
+}
+
+header img {
+    max-width: 180px;
+}
+
+.contenedor-header {
+    background-color: #210439;
+    width: 100%; /* Para que el contenedor ocupe el espacio restante del header */
+    display: flex;
+    flex-direction: column; /* Lo pongo en columna  */
+    align-items: center; /* Lo centro horizontalmente */
+    justify-content: center; /* LO Centro verticalmente */
+}
+
+header h1 {
+    /* border: 1px solid #000000; */
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+header p {
+    /* border: 1px solid #000000; */
+    color: white;
+    padding-bottom: 20px;
+}
+
+/* Tabla */
+
+.tabla {
+    /* border: 2px solid blue; */
+    max-height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Aplico Flex y centro el contenido en columna */
+    padding-bottom: 30px; /* Añado padding al bottom */
+    background-color: #DCDCDC;
+}
+
+.tabla h2 {
+    font-size: 32px;
+    text-decoration: underline; /* Subrayado del título */
+}
+
+.tabla table {
+    border: 1px solid black;
+    border-collapse: collapse; /* Fusiono los bordes */
+    width: 600px; /* Hago la tabla más ancha */
+}
+
+.tabla th, td {
+    text-align: center; /* Centro el contenido horizontalmente */
+    vertical-align: middle; /* Centro el contenido verticalmente */
+    padding: 8px; /* Padding al contenido de la tabla */
+}
+
+
+.tabla table tr:nth-child(even) {
+    background-color:#808080; /* Cambia el color de las filas pares */
+}
+
+
+.tabla table tr:nth-child(odd) {
+    background-color: #DCDCDC; /* Cambia el color de las lineas impares */
+}
+
+
+.tabla th {
+    font-size: 20px; /* Tamaño del título de las columnas de la tabla */
+    background-color: #483285;
+}
+
+/* Imagenes */
+
+.contenedor-imagenes {
+    max-height: 300px;
+    /* border: 3px solid orange; */
+    display: flex;
+    flex-direction: row;
+
+}
+
+.contenedor-imagenes img {
+    max-width: 250px;
+    width: 250px;
+    padding-top: 10px;
+    /* border: 1px solid grey; */
+    opacity: 0.4;
+}
+
+.imagen-texto {
+    border: 1px solid grey; /* Bordes grises */
+    border-top: 1px dashed grey;
+    border-bottom: 1px dashed grey;
+}
+
+
+.contenedor-imagenes p {
+    position: relative;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    max-height: 100px;
+    background-color: #210439;
+}
+
+footer h3 {
+    
+    font-size: 20px;
+}

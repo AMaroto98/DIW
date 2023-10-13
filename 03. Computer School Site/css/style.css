@@ -1,0 +1,113 @@
+* {
+    font-family: Verdana;
+    font-size: 13px;
+    max-width: 1000px;
+    /* margin: 0 auto; */
+}
+
+/* Header */
+
+header {
+    display: flex;
+    flex-direction: row;
+    width: 1000px;
+    /* border: 2px solid black; */
+}
+
+.text h1 {
+    font-size: 26px;
+}
+
+.text {
+    background-color:darkmagenta;
+    color: white;
+    text-decoration:solid;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 50px;
+}
+
+
+/* Navbar */
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none; /* Quitar los puntos a la lista */
+
+    border: 1px solid black;
+    background-color: rgb(117, 48, 196);
+}
+
+nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+
+    padding-top: 10px; /* Padding vertical */
+    padding-bottom: 10px; /* Padding vertical */
+
+    padding-left: 20px; /* Padding horizontal */
+    padding-right: 20px; /* Padding horizontal */
+
+    font-size: calc(1.3 * 13px);
+    /* Manera para que el texto sea un 30% más grande que el font-size del Body */
+    /* Importante usar . en lugar de , */
+}
+
+
+/* Imagenes */
+
+.pattern {
+    background-image: url('../images/pattern.jpg');
+    height: 100px;
+    max-width: 1000px;
+    border: 1px black dashed;
+
+}
+
+/* Tabla The Grades */
+
+.table {
+    border: 3px solid red; /* Borde al contenedor */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Aplico Flex y centro el contenido en columna */
+    padding-bottom: 30px; /* Añado padding al bottom */
+    background-color: #DCDCDC;
+}
+
+.table h2 {
+    font-size: 32px;
+    text-decoration: underline; /* Subrayado del título */
+}
+
+.table table {
+    border: 1px solid black;
+    border-collapse: collapse; /* Fusiono los bordes */
+    width: 600px; /* Hago la tabla más ancha */
+}
+
+.table th, td {
+    text-align: center; /* Centro el contenido horizontalmente */
+    vertical-align: middle; /* Centro el contenido verticalmente */
+    padding: 8px; /* Padding al contenido de la tabla */
+}
+
+
+.table table tr:nth-child(even) {
+    background-color:#808080; /* Cambia el color de las filas pares */
+}
+
+
+.table table tr:nth-child(odd) {
+    background-color: #DCDCDC; /* Cambia el color de las lineas impares */
+}
+
+
+.table th {
+    font-size: 20px; /* Tamaño del título de las columnas de la tabla */
+    background-color: #483285;
+}
