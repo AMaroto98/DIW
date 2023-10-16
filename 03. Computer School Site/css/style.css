@@ -6,7 +6,7 @@
 body {
     max-width: 1000px; /* Layout máximo de 1000px */
     margin: 0 auto; /* Centrar el contenido del body */
-    border: 1px solid #d80b0b;
+    /* border: 1px solid #d80b0b; */
 }
 
 /* Header */
