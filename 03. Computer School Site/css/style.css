@@ -12,7 +12,7 @@ body {
 /* Header */
 
 header {
-    border: 1px solid #000000;
+    /* border: 1px solid #000000; */
     max-height: 120px;
     display: flex;
     flex-direction: row;
@@ -54,7 +54,7 @@ nav ul {
     margin: 0; /* Quito los margenes para que no se vean franjas blancas arriba y abajo */
     padding-left: 0; /* Elimino padding para que se pegue a la izquierda del todo */
     height: 50px; /* ALtura máxima */
-    border: 1px solid black;
+    /* border: 1px solid black; */
     /* background-color: rgb(117, 48, 196); */
 }
 
