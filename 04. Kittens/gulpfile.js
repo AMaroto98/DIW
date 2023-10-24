@@ -3,7 +3,7 @@ const scss = require('gulp-sass')(require('sass'));
 const limpiarCss  = require('gulp-clean-css');
 const limpiarJs = require('gulp-uglify');
 const concatCss = require('gulp-concat-css');
-
+const concatJs = require('gulp-pseudoconcat-js');
 
 // 01. Compilar els arxius .scss de la carpeta "sass" i ficar-los dins una carpeta anomenada "css"
 function compilaSass() {
@@ -36,13 +36,19 @@ function concatenaCss() {
 }
 
 // 6- Tasca "concatjs". Concatena tots els arxius de la carpeta "dist/js" en ORDRE i crea un fitxes "all.js" a "dist/js/all.js". Prerequisit: "minimitzajs".
-function concatJs() {
-    
+function concatenaJs() {
+    return src('dist/js/*.js').pipe(concatJs("all.js")).pipe(dest('dist/js'));
+
 }
 
 // Exports
-exports.CompilarSass = compilaSass;
-exports.WatcherSass = watcherSass;
-exports.MinimizaCss = minimizaCss;
-exports.MinimizaJs = minimizaJs;
-exports.ConcatenaCss = series(concatenaCss, minimizaCssDist);
+// exports.CompilarSass = compilaSass;
+// exports.WatcherSass = watcherSass;
+// exports.MinimizaCss = minimizaCss;
+// exports.MinimizaJs = minimizaJs;
+// exports.ConcatenaCss = series(concatenaCss, minimizaCssDist);
+// exports.ConcatenaJs = concatenaJs;
+
+// 7- Crea una tasca "kittens" que executi totes les tasques (excepte els watchers), és a dir, executant la tasca "kittens" s'hauria de deixar preparat el projecte per pujar a producció.
+
+exports.Kittens = series(compilaSass,minimizaCss, minimizaJs, series(concatenaCss, minimizaCssDist), concatenaJs);
