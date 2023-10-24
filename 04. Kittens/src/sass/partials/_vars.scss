@@ -9,11 +9,11 @@ $base-font-family: 'Didact Gothic', sans-serif;
 $logo-font-family: 'Ribeye Marrow', cursive;
 
 $page-width:     1200px;
-$kitten-width:   $page-width / 4;
+$kitten-width:   calc($page-width / 4);
 $location-width: 33%;
 $info-width:     33%;
 
 $border-width:  10px;
-$border-radius: 20px;
+$border-radius: 21px;
 
 
