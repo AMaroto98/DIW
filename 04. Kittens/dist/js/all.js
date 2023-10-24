@@ -1,1 +1,0 @@
-document.write('<script src="dist/js/application.js"></script><script src="dist/js/jquery-2.1.0.min.js"></script><script src="dist/js/modernizr-2.5.2.min.js"></script>');
