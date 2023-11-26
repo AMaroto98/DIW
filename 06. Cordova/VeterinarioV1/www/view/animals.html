@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Veterinario</title>
+  </head>
+  <body>
+    <script type="module">
+      import { getAnimals } from "../service/AnimalService.js";
+
+      function pintar(animals) {
+        let table = "<table>";
+        table += "<tr>";
+        table += "<th>Nombre</th>";
+        table += "<th>Ficha</th>";
+        table += "</tr>";
+
+        for (let i = 0; i < animals.length; i++) {
+          table += "<tr>";
+          table += "<td>" + animals[i].name + "</td>";
+          table +=
+            "<td><a href='animalForm.html?identificador=" +
+            animals[i].id +
+            "'>ficha</td>";
+          table += "</tr>";
+        }
+
+        table += "</table>";
+
+        document.querySelector("body").innerHTML = table;
+      }
+
+      function init() {
+        const animals = getAnimals();
+        pintar(animals);
+      }
+
+      //window.addEventListener("load", init);
+      (function () {
+        init();
+      })();
+      
+    </script>
+  </body>
+</html>
