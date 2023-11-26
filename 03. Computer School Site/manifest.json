@@ -1,0 +1,48 @@
+{
+    "short_name": "Computer School Site",
+    "name": "School: Computer Site",
+    "icons": [
+        {
+          "src": "/images/php.png",
+          "type": "image/png",
+          "sizes": "192x192"
+        },
+        {
+          "src": "/images/angular.png",
+          "type": "image/png",
+          "sizes": "512x512"
+        }
+      ],
+    "start_url": "./",
+    "background_color": "#ffffff",
+    "display": "fullscreen",
+    "scope": "./",
+    "theme_color": "#3367D6",
+    "shortcuts": [
+        {
+            "name": "How's weather today?",
+            "short_name": "Today",
+            "description": "View weather information for today",
+            "url": "/today?source=pwa",
+            "icons": [
+                {
+                    "src": "/images/angular.png",
+                    "sizes": "192x192"
+                }
+            ]
+        },
+        {
+            "name": "How's weather tomorrow?",
+            "short_name": "Tomorrow",
+            "description": "View weather information for tomorrow",
+            "url": "/tomorrow?source=pwa",
+            "icons": [
+                {
+                    "src": "/images/php.png",
+                    "sizes": "192x192"
+                }
+            ]
+        }
+    ],
+    "description": "Trabajo de la muerte de clase!"
+}
