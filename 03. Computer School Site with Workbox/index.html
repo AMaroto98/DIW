@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="manifest" href="./manifest.json">
+
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header>
+      <img src="images/logo.png" alt="" />
+
+      <div class="contenedor-header">
+        <h1>Computer School 1</h1>
+        <p>Best computer school ever!</p>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li id="primer-link">Link 1</li>
+        <li>Link 2</li>
+        <li>Link 3</li>
+        <li>Link 4</li>
+      </ul>
+    </nav>
+
+    <div class="patron"></div>
+
+    <div class="imagen-ordenadores">
+      <img src="images/fotofrontal.jpg" alt="" />
+    </div>
+
+    <div class="tabla">
+      <h2>The Grades</h2>
+
+      <table>
+        <tr>
+          <th>Nom</th>
+          <th>NIF</th>
+          <th>Nota</th>
+        </tr>
+        <tr>
+          <td>Marta</td>
+          <td>1</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Jaon</td>
+          <td>2</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Lluis</td>
+          <td>3</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>Pepa</td>
+          <td>4</td>
+          <td>10</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="contenedor-imagenes">
+      <div class="imagen-texto">
+        <img src="images/javascript.png" alt="javascript" />
+        <p>javascript</p>
+      </div>
+
+      <div class="imagen-texto">
+        <img src="images/angular.png" alt="angular" />
+        <p>Angular</p>
+      </div>
+
+      <div class="imagen-texto">
+        <img src="images/php.png" alt="php" />
+        <p>PHP</p>
+      </div>
+
+      <div class="imagen-texto">
+        <img src="images/html5.png" alt="html5" />
+        <p>HTML5</p>
+      </div>
+    </div>
+
+    <footer>
+      <p>©cifpfbmoll.eu</p>
+      <p id="design">DESIGN OF WEB INTERFACES</p>
+    </footer>
+
+    <!-- In index.html, for example: -->
+    <script>
+      // Don't register the service worker
+      // until the page has fully loaded
+      window.addEventListener("load", () => {
+        // Is service worker available?
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker
+            .register("./sw.js")
+            .then(() => {
+              console.log("Service worker registered!");
+            })
+            .catch((error) => {
+              console.warn("Error registering service worker:");
+              console.warn(error);
+            });
+        }
+      });
+    </script>
+  </body>
+</html>
