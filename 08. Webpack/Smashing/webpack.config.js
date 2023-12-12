@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const ColoredProgressBar = require('colored-progress-bar-webpack-plugin');
 
 module.exports = {
   entry: "./src/js/main.js",
@@ -11,8 +12,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
-      clean: true,
+      template: "./src/index.html"
     }),
     new CopyWebpackPlugin({
       patterns: [
@@ -20,6 +20,7 @@ module.exports = {
         { from: "src/img", to: "img" },
       ],
     }),
+    new ColoredProgressBar()
   ],
   module: {
     rules: [
@@ -38,6 +39,10 @@ module.exports = {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+      }
     ],
   },
   devServer: {

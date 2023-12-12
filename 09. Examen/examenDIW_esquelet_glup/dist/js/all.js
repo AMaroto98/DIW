@@ -1,1 +1,0 @@
-document.write('<script src="dist/js/all.js"><\/script><script src="dist/js/chart.js"><\/script><script src="dist/js/selector.js"><\/script><script src="dist/js/vars.js"><\/script>');

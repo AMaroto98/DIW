@@ -1,6 +1,6 @@
 const { series, src, dest, parallel, watch } = require('gulp');
 const scss = require('gulp-sass')(require('sass'));
-const limpiarCss  = require('gulp-clean-css');
+const limpiarCss = require('gulp-clean-css');
 const limpiarJs = require('gulp-uglify');
 const concatCss = require('gulp-concat-css');
 const concatJs = require('gulp-pseudoconcat-js');
@@ -51,4 +51,4 @@ function concatenaJs() {
 
 // 7- Crea una tasca "kittens" que executi totes les tasques (excepte els watchers), és a dir, executant la tasca "kittens" s'hauria de deixar preparat el projecte per pujar a producció.
 
-exports.Kittens = series(compilaSass,minimizaCss, minimizaJs, series(concatenaCss, minimizaCssDist), concatenaJs);
+exports.Kittens = series(compilaSass, minimizaCss, minimizaJs, series(concatenaCss, minimizaCssDist), concatenaJs);

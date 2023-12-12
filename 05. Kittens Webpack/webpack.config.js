@@ -1,18 +1,18 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: './src/js/application.js',
-  mode: 'production',
+  entry: "./src/js/application.js",
+  mode: "production",
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, './dist'),
+    filename: "bundle.js",  
+    path: path.resolve(__dirname, "./dist"),
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
-      clean: true
-    })
+      template: "./src/index.html",
+      clean: true,
+    }),
   ],
   module: {
     rules: [
@@ -30,11 +30,11 @@ module.exports = {
     ],
   },
   devServer: {
-    static: './dist',
+    static: "./dist",
   },
   performance: {
     hints: false,
     maxEntrypointSize: 512000,
-    maxAssetSize: 512000
-}
+    maxAssetSize: 512000,
+  },
 };
