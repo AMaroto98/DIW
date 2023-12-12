@@ -1,0 +1,49 @@
+body {
+    font-size: 12px;
+    color: $text-color;
+}
+
+// Webkit --> Chrome y Edge | Moz --> Mozilla | O --> Opera
+// Por ejemplo, rotar un div se hace con un trasnform
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -moz-transform: $property;
+    -o-transform:$property;
+    transform: $property;
+}
+
+@mixin vendor($property, $value) {
+    -webkit-#{$property}: #{$value};
+    -moz-#{$property}: #{$value};
+    -o-#{$property}: #{$value};
+    #{$property}: #{$value};}
+
+.div {
+    @include transform((rotate(180deg)));
+}
+
+div.hola {
+    @include vendor("transform", (rotate(180deg)));
+    @include vendor("border-radius", '20%');
+
+}
+
+// @mixin dividirPantalla() {
+//     @for $i from 1 through 12 {
+//         .col-#{$i} {
+//             float:left;
+//             width: 8.33%;
+//         },
+//     }
+// }
+
+// #pantalla {
+//     @include dividirPantalla();
+// }
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        float:left;
+        width: 8.33%;
+    }
+}
