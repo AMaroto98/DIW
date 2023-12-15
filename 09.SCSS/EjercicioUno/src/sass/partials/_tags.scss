@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+}
+
+@mixin normal {
+  margin: 0;
+  color: $normal;
+  text-align: justify;
+  background-color: lighten($normal, 50%);
+}
+
+@mixin success {
+  color: $success;
+  background-color: darken($success, 25%);
+}
+
+@mixin warning {
+  color: $warning;
+  background-color: darken($warning, 25%);
+}
+
+@mixin error {
+  color: $error;
+  background-color: darken($error, 25%);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+  @include normal;
+  &.success {
+    @include success;
+  }
+  &.warning {
+    @include warning;
+  }
+  &.error {
+    @include error;
+  }
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: 2em - 0.2 * ($i - 1);
+    margin: 0;
+  }
+}
