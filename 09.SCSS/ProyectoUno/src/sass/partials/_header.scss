@@ -1,6 +1,8 @@
-header {
+.header {
   background-color: $bg-color;
   width: 100%;
+  padding: 15px;
+  color: $text-color;
 }
 
 %message-shared {

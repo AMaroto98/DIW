@@ -1,6 +1,8 @@
-header {
+.header {
   background-color: green;
   width: 100%;
+  padding: 15px;
+  color: blue;
 }
 
 .warning, .error, .success, .message {
@@ -46,62 +48,90 @@ div.hola {
 
 .col-1 {
   float: left;
-  width: 8.33%;
+  width: 8.3333333333%;
+  padding: 15px;
 }
 
 .col-2 {
   float: left;
-  width: 8.33%;
+  width: 16.6666666667%;
+  padding: 15px;
 }
 
 .col-3 {
   float: left;
-  width: 8.33%;
+  width: 25%;
+  padding: 15px;
 }
 
 .col-4 {
   float: left;
-  width: 8.33%;
+  width: 33.3333333333%;
+  padding: 15px;
 }
 
 .col-5 {
   float: left;
-  width: 8.33%;
+  width: 41.6666666667%;
+  padding: 15px;
 }
 
 .col-6 {
   float: left;
-  width: 8.33%;
+  width: 50%;
+  padding: 15px;
 }
 
 .col-7 {
   float: left;
-  width: 8.33%;
+  width: 58.3333333333%;
+  padding: 15px;
 }
 
 .col-8 {
   float: left;
-  width: 8.33%;
+  width: 66.6666666667%;
+  padding: 15px;
 }
 
 .col-9 {
   float: left;
-  width: 8.33%;
+  width: 75%;
+  padding: 15px;
 }
 
 .col-10 {
   float: left;
-  width: 8.33%;
+  width: 83.3333333333%;
+  padding: 15px;
 }
 
 .col-11 {
   float: left;
-  width: 8.33%;
+  width: 91.6666666667%;
+  padding: 15px;
 }
 
 .col-12 {
   float: left;
-  width: 8.33%;
+  width: 100%;
+  padding: 15px;
+}
+
+.menu {
+  width: 100px;
+}
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.menu li {
+  background-color: yellow;
+  margin: 8px;
+}
+.menu li:hover {
+  background-color: #999900;
 }
 
 footer {

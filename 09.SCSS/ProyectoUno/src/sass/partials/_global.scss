@@ -41,9 +41,30 @@ div.hola {
 //     @include dividirPantalla();
 // }
 
-@for $i from 1 through 12 {
+@for $i from 1 through $columnas {
     .col-#{$i} {
         float:left;
-        width: 8.33%;
+        // width: 8.33333333333% * $i;
+        width: calc(100% / $columnas * $i);
+        padding: 15px;
     }
 }
+
+.menu {
+    width: 100px;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+  
+    li {
+      background-color: $menu-bg-color;
+      margin: 8px;
+
+    }
+
+    li:hover {
+        background-color: $menu-bg-color-hover;
+    }
+  }

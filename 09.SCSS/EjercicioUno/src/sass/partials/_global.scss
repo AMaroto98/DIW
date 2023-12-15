@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+}
+
+%p {
+  text-justify: justify;
+  margin: 0;
+  color: white;
+}
+
+.success {
+  @extend %p;
+  background-color: darken($success, 25%);
+}
+
+.warning {
+  @extend %p;
+  background-color: darken($warning, 25%);
+}
+
+.error {
+  @extend %p;
+  background-color: darken($error, 25%);
+}
+
+p, h4 {
+  @extend %p;
+  background-color: lighten($normal, 50%);
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: 2em - 0.2 * ($i - 1);
+  }
+}
+
