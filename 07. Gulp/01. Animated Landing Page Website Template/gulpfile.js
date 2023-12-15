@@ -24,7 +24,6 @@ function minimizaJs() {
     return src('src/js/*.js').pipe(cleanJs()).pipe(dest('dist/js'));
 }
 
-// 5- Tasca "concatcss". Concatena tots els arxius de la carpeta "dist/css" en ORDRE i crea un fitxer "all.css" a "dist/css/all.css". Prerequisit: "minimitzacss"
 function minimizaCssDist() {
     return src('dist/css/all.css').pipe(cleanCss()).pipe(dest('dist/css'));
 
@@ -34,7 +33,6 @@ function concatenaCss() {
     return src('dist/css/*.css').pipe(concatCss("all.css")).pipe(dest('dist/css'));
 }
 
-// 6- Tasca "concatjs". Concatena tots els arxius de la carpeta "dist/js" en ORDRE i crea un fitxes "all.js" a "dist/js/all.js". Prerequisit: "minimitzajs".
 function minimizaJsDist() {
     return src('dist/js/all.js').pipe(cleanJs()).pipe(dest('dist/js'));
 
@@ -55,13 +53,14 @@ function copiarImagenes() {
 
 
 
-// exports.CompilarSass = compilaSass;
-// exports.MinimizarCss = minimizaCss;
-// exports.WatcherSass = watcherSass;
-// exports.MinimizarJs = minimizaJs;
-// exports.ConcatenaCss = series(concatenaCss, minimizaCssDist);
-// exports.ConcatenaJs = series(concatenaJs, minimizaJsDist);
-// exports.MinimizarHtml = minimizaHtml;
+exports.CompilarSass = compilaSass;
+exports.MinimizarCss = minimizaCss;
+exports.WatcherSass = watcherSass;
+exports.MinimizarJs = minimizaJs;
+exports.ConcatenaCss = series(concatenaCss, minimizaCssDist);
+exports.ConcatenaJs = series(concatenaJs, minimizaJsDist);
+exports.MinimizarHtml = minimizaHtml;
 
 
-exports.Animated = series(series(compilaSass, minimizaCss), minimizaJs, series(concatenaCss, minimizaCssDist), series(concatenaJs, minimizaJsDist), parallel(minimizaHtml, copiarImagenes));
+// exports.Animated = series(series(compilaSass, minimizaCss), minimizaJs, series(concatenaCss, minimizaCssDist), series(concatenaJs, minimizaJsDist), parallel(minimizaHtml, copiarImagenes));
+exports.Animated = series(series(compilaSass, minimizaCss), minimizaJs, concatenaCss, series(concatenaJs, minimizaJsDist), parallel(minimizaHtml, copiarImagenes));
