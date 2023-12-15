@@ -1,3 +1,6 @@
+// Import vendor
+@import "_webkit";
+
 @mixin normal {
   width: 300px;
   height: auto;
@@ -7,88 +10,96 @@
 }
 
 @mixin grayscale {
-    animation-name: grayscale;
-    @keyframes grayscale {
-        100% {filter:grayscale(100%)};
+  animation-name: grayscale;
+  @keyframes grayscale {
+    100% {
+      @include vendor("filter", grayscale(100%));
     }
+  }
 }
 
 @mixin sepia {
-    animation-name: sepia;
-    @keyframes sepia {
-        100% {filter:sepia(100%)};
+  animation-name: sepia;
+  @keyframes sepia {
+    100% {
+      @include vendor("filter", sepia(100%));
     }
+  }
 }
 
 @mixin blur {
-    animation-name: blur;
-    @keyframes blur {
-        100% {filter:blur(5px)};
-
+  animation-name: blur;
+  @keyframes blur {
+    100% {
+      @include vendor("filter", blur(5px));
     }
+  }
 }
 
 @mixin hue-rotate {
-    animation-name: hue-rotate;
-    @keyframes hue-rotate {
-        100% {filter:hue-rotate(150deg)};
-
+  animation-name: hue-rotate;
+  @keyframes hue-rotate {
+    100% {
+      @include vendor("filter", hue-rotate(150deg));
     }
+  }
 }
 
 @mixin invert {
-    animation-name: invert;
-    @keyframes invert {
-        100% {filter:invert(0.8)};
-
+  animation-name: invert;
+  @keyframes invert {
+    100% {
+      @include vendor("filter", invert(0.8));
     }
+  }
 }
 
 @mixin brightness {
-    animation-name: brightness;
-    @keyframes brightness {
-        100% {filter:brightness(0.5)};
-
+  animation-name: brightness;
+  @keyframes brightness {
+    100% {
+      @include vendor("filter", brightness(0.5));
     }
+  }
 }
 
 @mixin contrast {
-    animation-name: contrast;
-    @keyframes contrast {
-        100% {filter:contrast(2)};
-
+  animation-name: contrast;
+  @keyframes contrast {
+    100% {
+      @include vendor("filter", contrast(2));
     }
+  }
 }
 
 img {
+  @include normal;
 
-    @include normal;
+  &.grayscale {
+    @include grayscale;
+  }
 
-    &.grayscale {
-        @include grayscale;
-    }
+  &.sepia {
+    @include sepia;
+  }
 
-    &.sepia {
-        @include sepia;
-    }
+  &.blur {
+    @include blur;
+  }
 
-    &.blur {
-        @include blur;
-    }
+  &.hue-rotate {
+    @include hue-rotate;
+  }
 
-    &.hue-rotate {
-        @include hue-rotate;
-    }
+  &.invert {
+    @include invert;
+  }
 
-    &.invert {
-        @include invert;
-    }
+  &.brightness {
+    @include brightness;
+  }
 
-    &.brightness {
-        @include brightness;
-    }
-
-    &.contrast {
-        @include contrast;
-    }
+  &.contrast {
+    @include contrast;
+  }
 }

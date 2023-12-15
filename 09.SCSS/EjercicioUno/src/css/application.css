@@ -10749,6 +10749,8 @@ img.grayscale {
 }
 @keyframes grayscale {
   100% {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
     filter: grayscale(100%);
   }
 }
@@ -10757,6 +10759,8 @@ img.sepia {
 }
 @keyframes sepia {
   100% {
+    -webkit-filter: sepia(100%);
+    -moz-filter: sepia(100%);
     filter: sepia(100%);
   }
 }
@@ -10765,6 +10769,8 @@ img.blur {
 }
 @keyframes blur {
   100% {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
     filter: blur(5px);
   }
 }
@@ -10773,6 +10779,8 @@ img.hue-rotate {
 }
 @keyframes hue-rotate {
   100% {
+    -webkit-filter: hue-rotate(150deg);
+    -moz-filter: hue-rotate(150deg);
     filter: hue-rotate(150deg);
   }
 }
@@ -10781,6 +10789,8 @@ img.invert {
 }
 @keyframes invert {
   100% {
+    -webkit-filter: invert(0.8);
+    -moz-filter: invert(0.8);
     filter: invert(0.8);
   }
 }
@@ -10789,6 +10799,8 @@ img.brightness {
 }
 @keyframes brightness {
   100% {
+    -webkit-filter: brightness(0.5);
+    -moz-filter: brightness(0.5);
     filter: brightness(0.5);
   }
 }
@@ -10797,6 +10809,8 @@ img.contrast {
 }
 @keyframes contrast {
   100% {
+    -webkit-filter: contrast(2);
+    -moz-filter: contrast(2);
     filter: contrast(2);
   }
 }
