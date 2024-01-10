@@ -1,0 +1,24 @@
+// Header
+@use "@material/icon-button";
+@use "@material/top-app-bar/mdc-top-app-bar";
+
+// Navbar
+@use "@material/tab-bar/mdc-tab-bar";
+@use "@material/tab-scroller/mdc-tab-scroller";
+@use "@material/tab-indicator/mdc-tab-indicator";
+@use "@material/tab/mdc-tab";
+
+// Layout
+@use "@material/layout-grid/mdc-layout-grid";
+
+// Cards
+@use "@material/card";
+
+
+// Header
+@import "@material/icon-button/mdc-icon-button";
+
+.mdc-card img {
+    height: 250px;
+    width: 250px;
+}
