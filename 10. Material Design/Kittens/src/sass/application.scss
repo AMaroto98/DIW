@@ -14,11 +14,39 @@
 // Cards
 @use "@material/card";
 
-
 // Header
 @import "@material/icon-button/mdc-icon-button";
 
-.mdc-card img {
-    height: 250px;
-    width: 250px;
+h1 {
+    margin-left: 30px;
+}
+
+.mdc-card {
+  ul.kittens {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    img.kitten {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+body {
+  background-image: url("../img/background.png");
+}
+
+.wrapper {
+  text-align: right;
+  padding-right: 20px;
+
+  .search {
+    margin-top: 10px;
+    margin-left: 15px;
+    display: inline-block;
+  }
 }
