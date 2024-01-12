@@ -39,3 +39,6 @@ const selector = '.mdc-button, .mdc-icon-button, .mdc-card__primary-action';
 const ripples = [].map.call(document.querySelectorAll(selector), function(el) {
   return new MDCRipple(el);
 });
+
+// Buttons
+const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
