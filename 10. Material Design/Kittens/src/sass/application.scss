@@ -27,21 +27,36 @@ h1 {
     margin-left: 30px;
 }
 
-.mdc-card {
-  ul.kittens {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    img.kitten {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }   
+
+.kittens {
+  .mdc-layout-grid__cell {
+    max-width: 200px; 
+    margin: 8px; 
+  }
+
+  .mdc-card {
+    width: 100%;
+  }
+
+  .mdc-card__media {
+    width: 100%; 
+    height: auto; 
+  }
+
+  .mdc-card__content {
+    padding: 8px;
+  }
+
+  .mdc-card__actions {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+
+    .mdc-button {
+      padding: 8px; 
+    }
   }
 }
-
 
 
 body {
