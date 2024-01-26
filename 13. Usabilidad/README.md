@@ -83,8 +83,70 @@ Menú: Máximo con dos subniveles
     - Reducir el tiempo de carga al mínimo posible (1-3 segundos aceptable, más de 10 segundos nunca).
     - Evitar el uso de sonidos y locuciones innecesarias.
     - ¡Dar siempre el estado actual en procesos largos (Pagos, compras de billetes de aviones...)!
-    - 
+    - Veracidad de los datos.
+    - Locale: Fechas, dias de la semana, unidades de medida... en formato local (idiomas, sistémas métricos)
+        - Formato fechas: 
+            - 2024-01-26 (ANSI)
+            - 26/01/2024 (Para el usuario)
     
 ---
 
+## Formularios
 
+    - No dejar enviar información con formularios erróneos (validar en cliente).
+    - Si hay un error remarcar exactamente el campo que tiene el error.
+    - Autorellenado de datos siempre que sea posible.
+
+---
+
+## Mensajes de error
+
+    - Los mensajes de error tienen que ayudar al usuario a detectar y resolver el fallo.
+    - Los mensajes de error deben ser: 
+        - Específicos
+        - Constructivos
+        - Positivo
+
+    Ejemplo:
+
+    El campo "nombre" debe estar informado. --> Correcto
+    No deje el campo "nombre" vacío. --> Incorrecto
+    Corrija los errores --> Incorrecto
+    No tiene sentido que el campo nombre esté vacío --> Incorrecto
+
+---
+
+## Pie de página
+
+    - Información legal
+    - Información de contacto
+    - Mapa del sitio
+
+---
+
+## En contexto de gestión
+
+    - Poder hacer CRUD (Create, Read, Update, Delete).
+    - Listado donde cada elemento se pueda actualizar y eliminar. Arriba botón de añadir
+
+---
+
+## Reglas
+
+1. No me hagas pensar
+2. ¿Cómo puedo saber si funciona?
+
+---
+
+## Medidas objetivas para medir la usabilidad
+
+    - Mapa de calor (Heat Map)
+    Los mapas de calor sobre nuestra web miden la interactivdad de un usuario.
+    - Ley de los 3 clicks: Si el usuario no encuentra lo que quiere en 3 clicks se va (incrementa el bounce rate).
+    - % Bounce es la tasa de rebotes: Gente que abre la página, no interectua y se va (Google Analytics).
+    - % Links rotos (debería ser 0 o próximo).
+    - Disponibilidad de la web --> Esté disponible (> 99%).
+    - Tiempo de permanencia en la página --> > 30 segundos va bien (Analytics).
+    - Número de errores del Frontend (Cuanto más se aproxima a 0 mejor).
+
+    
