@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables CSS</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="result">Hola</div>
+
+    <input type="color" name="color" id="input"/>
+
+    <script>
+        
+        addEventListener('input', function() {
+            
+            var r = document.querySelector(":root");
+            var color = document.getElementById("input").value;
+            r.style.setProperty('--bg', color);
+
+            var colorRecuperado = r.style.getPropertyValue('--bg');
+            var result = document.getElementById("result");
+            result.innerHTML = colorRecuperado;
+        });
+
+    </script>
+  </body>
+</html>
