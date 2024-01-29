@@ -149,4 +149,9 @@ Menú: Máximo con dos subniveles
     - Tiempo de permanencia en la página --> > 30 segundos va bien (Analytics).
     - Número de errores del Frontend (Cuanto más se aproxima a 0 mejor).
 
-    
+---
+
+# Optimización
+
+Mejorar la experiencia de usuario, normalmente a costa de disminuir la calidad (fotos), cantidad de archivos (concatenando archivos) o la omisión de los mismos (borrado parcial de archivos).
+
